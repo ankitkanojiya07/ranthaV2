@@ -150,6 +150,31 @@ const QuickFacts: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Plan Your Safari Button */}
+        <div className={`mt-12 text-center transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <a
+            href="#booking"
+            className="inline-flex items-center px-8 py-4 bg-[#3C3228] text-[#f5ebe0] rounded-lg font-bold text-lg shadow-lg hover:bg-[#997B66] transform transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+          >
+            <span>Plan Your Safari</span>
+            <svg 
+              className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M13 7l5 5m0 0l-5 5m5-5H6" 
+              />
+            </svg>
+          </a>
+        </div>
       </div>
 
       <style jsx>{`

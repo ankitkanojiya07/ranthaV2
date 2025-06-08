@@ -126,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
           ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
           overflow-hidden flex flex-col`}
         style={{
-          background: 'linear-gradient(135deg, rgba(13, 20, 33, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%)',
+          background: '#f5ebe0',
           backdropFilter: 'blur(20px)',
           borderLeft: '1px solid rgba(255, 255, 255, 0.1)'
         }}
@@ -140,11 +140,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
           </div>
         </div>
         
-        {/* Enhanced header with glow effect */}
-        <div className="flex justify-between items-center p-6 border-b border-white/10 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 animate-pulse" />
-          <span className="text-white font-bold tracking-wider text-lg flex items-center relative z-10">
-            <Sparkles className="mr-2 text-teal-400 animate-pulse" size={20} />
+        {/* Enhanced header with glow effect */}          <div className="flex justify-between items-center p-6 border-b border-[#3C3228]/10 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3C3228]/5 to-[#3C3228]/10 animate-pulse" />
+          <span className="text-[#3C3228] font-bold tracking-wider text-lg flex items-center relative z-10">
+            <Sparkles className="mr-2 text-[#3C3228] animate-pulse" size={20} />
             RANTHAMBORE
           </span>
           <button 
@@ -165,8 +164,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                   href={`#${link.id}`}
                   className={`flex items-center px-6 py-4 font-medium transition-all duration-500 relative group overflow-hidden ${
                     activeSection === link.id
-                      ? 'bg-gradient-to-r from-teal-500/30 to-cyan-500/30 text-white border-r-2 border-teal-400'
-                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                      ? 'bg-gradient-to-r from-black/5 to-black/10 text-black border-r-2 border-black'
+                      : 'text-black hover:text-black hover:bg-black/5'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                   onMouseEnter={() => setActiveHoverIndex(index)}
@@ -182,8 +181,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                   
                   {/* Icon with special effects */}
                   <span className={`mr-4 relative z-10 transition-all duration-300 ${
-                    activeSection === link.id ? 'text-teal-400 scale-110' : 
-                    activeHoverIndex === index ? 'text-teal-300 scale-105' : 'text-cyan-300'
+                    activeSection === link.id ? 'text-black scale-110' : 
+                    activeHoverIndex === index ? 'text-black scale-105' : 'text-black'
                   }`}>
                     <div className={`${activeHoverIndex === index ? 'animate-bounce' : ''}`}>
                       {link.icon}
@@ -201,8 +200,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                   <ChevronRight 
                     size={16} 
                     className={`transform transition-all duration-500 relative z-10 ${
-                      activeSection === link.id ? 'opacity-100 text-teal-400 scale-110' : 
-                      activeHoverIndex === index ? 'opacity-80 translate-x-1 text-teal-300' : 
+                      activeSection === link.id ? 'opacity-100 text-black scale-110' : 
+                      activeHoverIndex === index ? 'opacity-80 translate-x-1 text-black' : 
                       'opacity-0 -translate-x-2'
                     }`} 
                   />
@@ -221,14 +220,14 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
         <div className="w-full px-6 mt-6 mb-6">
           <a
             href="#booking"
-            className="block w-full py-4 text-white bg-gradient-to-r from-teal-500 to-cyan-500 font-bold text-center rounded-xl hover:shadow-2xl hover:shadow-teal-500/30 transform transition-all duration-500 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-teal-400/50 relative overflow-hidden group"
+            className="block w-full py-4 text-black bg-[#f5ebe0] border-2 border-black font-bold text-center rounded-xl hover:shadow-2xl transform transition-all duration-500 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black relative overflow-hidden group"
             onClick={() => setIsMenuOpen(false)}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <span className="relative z-10 flex items-center justify-center">
-              <Sparkles className="mr-2 animate-pulse" size={18} />
+              <Sparkles className="mr-2 animate-pulse text-black" size={18} />
               Book Safari Now
-              <Sparkles className="ml-2 animate-pulse" size={18} />
+              <Sparkles className="ml-2 animate-pulse text-black" size={18} />
             </span>
           </a>
         </div>
@@ -238,7 +237,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       <header
         className={`fixed top-0 left-0 w-full z-30 transition-all duration-700 ${
           isScrolled 
-            ? 'bg-slate-900/80 backdrop-blur-xl shadow-2xl shadow-black/20 py-2' 
+            ? 'bg-black py-2' 
             : 'bg-gradient-to-b from-slate-900/70 via-slate-800/50 to-transparent py-4'
         } ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
         onMouseEnter={() => setIsHovered(true)}
@@ -271,10 +270,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 
                 <div className="overflow-hidden rounded-lg relative z-10">
                   <img 
-                    src="./Images/Hero/logo.png" 
+                    src={isScrolled ? "./Images/Hero/logo.png" : "./Images/Hero/logo.png"}
                     alt="Ranthambore National Park Logo" 
                     className={`transition-all duration-700 transform group-hover:scale-105 group-hover:rotate-1 ${
-                      isScrolled ? 'h-16 w-auto' : 'h-24 w-auto'
+                      isScrolled ? 'h-16 w-auto brightness-0 invert' : 'h-24 w-auto'
                     }`} 
                     style={{ 
                       imageRendering: 'crisp-edges',
@@ -287,14 +286,14 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
             
             <div className="flex items-center space-x-2">              
               <button
-                className="menu-button relative p-3 text-white/90 hover:text-white rounded-xl transition-all duration-500 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400/50 group overflow-hidden"
+                className={`menu-button relative p-3 ${isScrolled ? 'text-white' : 'text-white/90'} hover:text-white rounded-xl transition-all duration-500 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400/50 group overflow-hidden`}
                 onClick={toggleMenu}
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMenuOpen}
                 style={{
                   background: isMenuOpen ? 
                     'linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)' :
-                    'rgba(255, 255, 255, 0.05)'
+                    isScrolled ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.05)'
                 }}
               >
                 {/* Animated background */}

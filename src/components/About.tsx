@@ -145,22 +145,22 @@ const About: React.FC = () => {
               </div>
               
               {/* Enhanced UNESCO Badge */}
-              <div className="absolute -bottom-5 -right-5 bg-[#bc6c25] text-white p-4 rounded-lg shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 hover:scale-110">
+              <div className="absolute -bottom-3 -right-3 bg-[#f5ebe0] text-[#3C3228] p-2 rounded-lg shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 hover:scale-110 border border-[#3C3228]/20">
                 <div className="flex items-center">
-                  <div className="mr-3">
-                    <svg className="w-10 h-10" viewBox="0 0 122.88 122.88" fill="currentColor">
+                  <div className="mr-2">
+                    <svg className="w-6 h-6" viewBox="0 0 122.88 122.88" fill="currentColor">
                       <path d="M61.44,0A61.46,61.46,0,1,1,18,18,61.25,61.25,0,0,1,61.44,0ZM76.39,32.94c-.11-.32-.22-.64-.34-1l-2.18.95a33.67,33.67,0,0,0-47.74,0l-2.18-.95c-.12.32-.23.64-.34,1L26.8,34.06a33.3,33.3,0,0,0,.63,37.8l-3.7,3.7L30,81.84l6.28-6.28-3.65-3.65a26.23,26.23,0,0,1,32.89-39.8,26.37,26.37,0,0,1,24.75,33.52L86.6,62.28L92.88,68.56l6.28-6.28-3.7-3.7a33.51,33.51,0,0,0,.63-37.8l3.19-1.12c-.11-.32-.22-.64-.34-1L96.76,19.6A33.58,33.58,0,0,0,74.82,10h0L76.39,32.94ZM74.05,45.51c0,12.93-7.46,23.61-17.2,24.94V86.06l9.65,9.65L62.22,100l-4.64-4.64L53,100l-4.28-4.29,9.65-9.65V70.45c-9.74-1.33-17.2-12-17.2-24.94Z"/>
                     </svg>
                   </div>
                   <div>
-                    <p className="font-bold text-xs uppercase tracking-wide">UNESCO</p>
-                    <p className="font-bold">World Heritage Site</p>
+                    <p className="font-bold text-[10px] uppercase tracking-wide">UNESCO</p>
+                    <p className="font-bold text-xs">World Heritage Site</p>
                   </div>
                 </div>
               </div>
               
               {/* Enhanced Location Badge */}
-              <div className="absolute -top-5 -left-5 bg-[#bc6c25] text-white px-4 py-2 rounded-lg shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 hover:scale-110">
+              <div className="absolute -top-5 -left-5 bg-[#f5ebe0] text-[#3C3228] px-4 py-2 rounded-lg shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 hover:scale-110 border border-[#3C3228]/20">
                 <div className="flex items-center">
                   <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

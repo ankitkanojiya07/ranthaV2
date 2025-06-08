@@ -108,7 +108,7 @@ const Testimonials: React.FC = () => {
     if (isAutoPlaying) {
       interval = setInterval(() => {
         nextSlide();
-      }, 8000);
+      }, 12000);
     }
     
     return () => clearInterval(interval);
@@ -134,7 +134,7 @@ const Testimonials: React.FC = () => {
           <h2 className="text-3xl font-bold text-[#3C3228]-800 mb-2">
             Client Testimonials
           </h2>
-          <div className="w-24 h-1 bg-emerald-700 mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-[#3C3228] mx-auto mb-4"></div>
           <p className="text-[#3C3228]-600 max-w-2xl mx-auto">
             Authentic experiences shared by wildlife enthusiasts and travelers who have explored Ranthambore National Park
           </p>
@@ -147,7 +147,7 @@ const Testimonials: React.FC = () => {
               prevSlide();
               handleSlideInteraction();
             }}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-[#3C3228]/50"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5 text-[#3C3228]-700" />
@@ -160,8 +160,8 @@ const Testimonials: React.FC = () => {
             >
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0">
-                  <div className="bg-white p-8 border-l-4 border-emerald-600">
-                    <div className="flex justify-between items-start mb-6">
+                  <div className="bg-white p-6 border-l-4 border-[#3C3228]">
+                    <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center">
                         <Quote className="w-10 h-10 text-[#3C3228] opacity-30 mr-3" />
                         {/* Rating Stars */}
@@ -184,7 +184,7 @@ const Testimonials: React.FC = () => {
                     </p>
                     
                     <div className="flex items-center border-t pt-5 mt-6 border-gray-100">
-                      <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-10 h-10 bg-[#3C3228] rounded-full flex items-center justify-center text-[#f5ebe0] font-bold text-lg">
                         {testimonial.author.split(' ').map(name => name[0]).join('')}
                       </div>
                       <div className="ml-4">
@@ -207,7 +207,7 @@ const Testimonials: React.FC = () => {
               nextSlide();
               handleSlideInteraction();
             }}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-[#3C3228]/50"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5 text-[#3C3228]-700" />
@@ -221,7 +221,7 @@ const Testimonials: React.FC = () => {
                 className={`w-2 h-2 mx-1 rounded-full transition-all duration-300 ${
                   activeIndex === index 
                     ? 'bg-emerald-700 w-6' 
-                    : 'bg-gray-300 hover:bg-emerald-400'
+                    : 'bg-gray-300 hover:bg-[#3C3228]/60'
                 }`}
                 onClick={() => {
                   setActiveIndex(index);
@@ -233,8 +233,8 @@ const Testimonials: React.FC = () => {
           </div>
           
           {/* Verification Badge */}
-          <div className="flex justify-center mt-10">
-            <div className="flex items-center bg-emerald-50 px-4 py-2 rounded-full text-sm">
+          <div className="flex justify-center mt-8">
+            <div className="flex items-center bg-[#3C3228]/5 px-4 py-2 rounded-full text-sm">
               <svg className="w-4 h-4 text-[#3C3228] mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
@@ -249,7 +249,7 @@ const Testimonials: React.FC = () => {
             <h2 className="text-3xl font-bold text-[#3C3228] mb-2">
               Frequently Asked Questions
             </h2>
-            <div className="w-24 h-1 bg-emerald-700 mx-auto mb-4"></div>
+            <div className="w-24 h-1 bg-[#3C3228] mx-auto mb-4"></div>
             <p className="text-[#3C3228]-600 max-w-2xl mx-auto">
               Everything you need to know about planning your visit to Ranthambore National Park
             </p>
@@ -259,7 +259,7 @@ const Testimonials: React.FC = () => {
             {faqs.map((faq) => (
               <div key={faq.id} className="border-b border-gray-100 last:border-b-0">
                 <button
-                  className="w-full flex justify-between items-center p-6 text-left focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-inset"
+                  className="w-full flex justify-between items-center p-5 text-left focus:outline-none focus:ring-2 focus:ring-[#3C3228]/30 focus:ring-inset"
                   onClick={() => toggleFAQ(faq.id)}
                 >
                   <h3 className="text-lg font-medium text-[#3C3228]-800">{faq.question}</h3>
@@ -272,7 +272,7 @@ const Testimonials: React.FC = () => {
                 
                 <div 
                   className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                    faq.isOpen ? 'max-h-96 pb-6' : 'max-h-0'
+                    faq.isOpen ? 'max-h-96 pb-5' : 'max-h-0'
                   }`}
                 >
                   <p className="text-[#3C3228]-600 leading-relaxed">{faq.answer}</p>

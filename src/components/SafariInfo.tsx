@@ -340,8 +340,8 @@ const SafariInfo: React.FC = () => {
         </div>
 
         {/* Safari Experience */}
-        <div className="relative overflow-hidden rounded-lg shadow-xl">
-          <div className="h-96 bg-cover bg-center relative">
+        <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw]">
+          <div className="relative h-screen">
             <img 
               src="./Images/safariInfo/tigerBW.jpg" 
               alt="Wildlife Safari Experience"

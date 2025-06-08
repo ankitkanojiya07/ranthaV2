@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
     { type: 'image', src: './Images/Hero/8.jpg' },
     { type: 'image', src: './Images/Hero/1.png' },
     // Add your video here. For example:
-    { type: 'video', src: './Images/Hero/v1.MOV' },
+    // { type: 'video', src: './Images/Hero/v1.MOV' },
     { type: 'image', src: './Images/Hero/10.jpg' },
     { type: 'image', src: './Images/Hero/7.jpg' },
     { type: 'image', src: './Images/Hero/9.jpg' },
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           setIsTransitioning(false);
         }, 100);
       }
-    }, 2000);
+    }, 5000);
 
     const handleParallax = () => {
       if (sliderRef.current && heroRef.current) {

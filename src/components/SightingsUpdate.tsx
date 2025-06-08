@@ -172,52 +172,55 @@ const SightingsUpdate: React.FC = () => {
             <p className="mt-4 text-[var(--color-text-secondary)] max-w-3xl mx-auto body-sans transform transition-all duration-1000 delay-300">
               Stay informed about zone availability and timings throughout the year at Ranthambore National Park.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Zone Information Card */}
-            <div className={`custom-card transition-all duration-800 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          </div>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Zone Availability Card */}            {/* Combined Zone Information Card */}
+            <div className={`custom-card lg:col-span-3 transition-all duration-800 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                  style={{transitionDelay: '400ms'}}>
-              <h3 className="card-title">Zone Availability</h3>
+              <h3 className="card-title">Zone Information</h3>
               
               <div className="card-divider"></div>
               
-              <div>
-                <p className="card-subtitle mb-3">
-                  <span style={{fontWeight: 600}}>Zones Available:</span>
-                </p>
-                <div className="flex flex-wrap justify-center gap-1 mb-4">
-                  {[1,2,3,4,5,6,7,8,9,10].map((zone) => (
-                    <span key={zone} className="zone-number">
-                      {zone}
-                    </span>
-                  ))}
+              {/* Internal Cards Container */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Available Zones Card */}
+                <div className="bg-[#f8f9fa] rounded-lg p-4 border-l-4 border-[#3C3228] shadow-sm">
+                  <h4 className="text-[16px] font-semibold text-[var(--font-color)] mb-3 text-center">Zones Available</h4>
+                  <div className="flex flex-wrap justify-center gap-2 mb-2">
+                    {[1,2,3,4,5,6,7,8,9,10].map((zone) => (
+                      <span key={zone} className="zone-number hover:scale-110 transition-transform">
+                        {zone}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Weekly Closure Schedule Card */}
+                <div className="bg-[#f8f9fa] rounded-lg p-4 border-l-4 border-[#3C3228] shadow-sm">
+                  <h4 className="text-[16px] font-semibold text-[var(--font-color)] mb-3 text-center">Weekly Closure Schedule</h4>
+                  <div className="space-y-3">
+                    <div className="text-center p-2 bg-white rounded shadow-sm">
+                      <p className="font-semibold text-[var(--font-color)] mb-1">Wednesday Closure</p>
+                      <p className="text-[var(--font-color-sub)]">Zones 1/2/3/4/5</p>
+                    </div>
+                    <div className="text-center p-2 bg-white rounded shadow-sm">
+                      <p className="font-semibold text-[var(--font-color)] mb-1">Tuesday Closure</p>
+                      <p className="text-[var(--font-color-sub)]">Zones 6/7/8/9/10</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Monsoon Season Notice Card */}
+                <div className="bg-[#f8f9fa] rounded-lg p-4 border-l-4 border-[#3C3228] shadow-sm">
+                  <h4 className="text-[16px] font-semibold text-[var(--font-color)] mb-3 text-center">Monsoon Season Notice</h4>
+                  <div className="text-center p-2 bg-white rounded shadow-sm">
+                    <p className="font-semibold text-[var(--font-color)] mb-1">July, August & September</p>
+                    <p className="text-[var(--font-color-sub)]">During Monsoon season only zones 6 to 10 are Open for safari visits.</p>
+                  </div>
                 </div>
               </div>
-
-              <div className="info-section">
-                <p style={{fontWeight: 600, color: 'var(--font-color)', fontSize: '14px', marginBottom: '8px'}}>
-                  Weekly Closure Schedule:
-                </p>
-                <ul style={{listStyle: 'disc', paddingLeft: '20px', fontSize: '13px', color: 'var(--font-color-sub)'}}>
-                  <li>Zones 1/2/3/4/5 are Closed on Every Wednesday</li>
-                  <li>Zones 6/7/8/9/10 are Closed on Every Tuesday</li>
-                </ul>
-              </div>
-
-              <div className="info-section">
-                <p style={{fontWeight: 600, color: 'var(--font-color)', fontSize: '14px', marginBottom: '8px'}}>
-                  Monsoon Season Notice:
-                </p>
-                <p style={{fontSize: '13px', color: 'var(--font-color-sub)'}}>
-                  During Monsoon (July, August & September) season only zones 6 to 10 are Open.
-                </p>
-              </div>
-            </div>
-
-            {/* Safari Timings Card */}
-            <div className={`custom-card transition-all duration-800 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                 style={{transitionDelay: '600ms'}}>
+            </div>{/* Safari Timings Card */}
+            <div className={`custom-card lg:col-span-3 transition-all duration-800 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                 style={{transitionDelay: '700ms'}}>
               <h3 className="card-title">Safari Timings by Season</h3>
               
               <div className="card-divider"></div>

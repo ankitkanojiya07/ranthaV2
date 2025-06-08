@@ -65,20 +65,20 @@ const BookingSafari: React.FC = () => {
             --input-focus: #2d8cf0;
             --font-color: #323232;
             --font-color-sub: #666;
-            --bg-color: beige;
-            --main-color: black;
-            padding: 30px;
-            background: lightblue;
+            --bg-color: #fff;
+            --main-color: #323232;
+            padding: 25px 20px;
+            background: #f8f9fa;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
-            border-radius: 5px;
+            gap: 10px;
+            border-radius: 8px;
             border: 2px solid var(--main-color);
             box-shadow: 4px 4px var(--main-color);
             width: 100%;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
           }
 
@@ -99,22 +99,24 @@ const BookingSafari: React.FC = () => {
 
           .form-input {
             width: 100%;
-            height: 45px;
-            border-radius: 5px;
+            height: 40px;
+            border-radius: 6px;
             border: 2px solid var(--main-color);
             background-color: var(--bg-color);
-            box-shadow: 4px 4px var(--main-color);
-            font-size: 15px;
-            font-weight: 600;
+            box-shadow: 2px 2px var(--main-color);
+            font-size: 14px;
+            font-weight: 500;
             color: var(--font-color);
             padding: 5px 15px;
             outline: none;
             transition: all 0.3s ease;
+            text-align: center;
           }
 
           .form-input::placeholder {
             color: var(--font-color-sub);
             opacity: 0.8;
+            text-align: center;
           }
 
           .form-input:focus {
@@ -125,19 +127,20 @@ const BookingSafari: React.FC = () => {
 
           .form-textarea {
             width: 100%;
-            min-height: 100px;
-            border-radius: 5px;
+            min-height: 80px;
+            border-radius: 6px;
             border: 2px solid var(--main-color);
             background-color: var(--bg-color);
-            box-shadow: 4px 4px var(--main-color);
-            font-size: 15px;
-            font-weight: 600;
+            box-shadow: 2px 2px var(--main-color);
+            font-size: 14px;
+            font-weight: 500;
             color: var(--font-color);
             padding: 10px 15px;
             outline: none;
             resize: vertical;
             font-family: inherit;
             transition: all 0.3s ease;
+            text-align: center;
           }
 
           .form-textarea:focus {
@@ -157,29 +160,34 @@ const BookingSafari: React.FC = () => {
           .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 12px;
             width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
           }
 
           .form-group {
             display: flex;
             flex-direction: column;
             width: 100%;
+            align-items: center;
           }
 
           .form-button {
-            margin: 30px auto 0 auto;
-            width: 150px;
-            height: 50px;
-            border-radius: 5px;
+            margin: 15px auto 0 auto;
+            width: 180px;
+            height: 42px;
+            border-radius: 6px;
             border: 2px solid var(--main-color);
-            background-color: var(--bg-color);
-            box-shadow: 4px 4px var(--main-color);
-            font-size: 17px;
+            background-color: #3C3228;
+            box-shadow: 2px 2px var(--main-color);
+            font-size: 16px;
             font-weight: 600;
-            color: var(--font-color);
+            color: #f5ebe0;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
           }
 
           .form-button:hover {
